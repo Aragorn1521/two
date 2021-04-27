@@ -37,9 +37,11 @@
                                         <div class="productinfo text-center">
                                             <img src="/template/images/home/product1.jpg" alt="" />
                                             <h2><?php echo $product['price']; ?></h2>
-                                            <a href="/product/<?php echo $product['id']; ?>">
-                                               <p><?php echo $product['name']; ?></p>
+                                            <p>
+                                                <a href="/product/<?php echo $product['id']; ?>">
+                                                ID:<?php echo $product['id'];?>,<?php echo $product['name']; ?>
                                             </a> 
+                                            </p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                         </div>
                                          <?php if ($product['is_new']):?>
@@ -50,10 +52,12 @@
                             </div>
                             <?php endforeach;?>
                             
+                            
+                            
                            
 
                         </div><!--features_items-->
-
+<?php echo $pagination->get();?>
                         <div class="recommended_items"><!--recommended_items-->
                             <h2 class="title text-center">Рекомендуемые товары</h2>
 
