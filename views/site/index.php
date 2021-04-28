@@ -11,7 +11,7 @@
                                 <?php foreach ($categories as $values):?>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title"><a href="/<?php echo $values['id'];?>"> 
+                                        <h4 class="panel-title"><a href="/catalog/<?php echo $values['id'];?>"> 
                                             <?php echo $values['name']; ?>
                                             </a>
                                         </h4>

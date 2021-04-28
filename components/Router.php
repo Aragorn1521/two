@@ -1,6 +1,6 @@
 <?php
 
-Class Rouret
+Class Router
 {
     private $routes;
     
