@@ -6,7 +6,10 @@
 
             <div class="col-sm-4 col-sm-offset-4 padding-right">
                 
-                
+                <?php if ($result): ?>
+                    <p>Вы зарегистрированы!</p>
+                    <?php endif;?>
+                <?php if($result == false): ?>
                     <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>
                             <?php foreach ($errors as $error): ?>
@@ -25,8 +28,7 @@
                         </form>
                     </div><!--/sign up form-->
                 
-                
-                
+                <?php endif; ?>
                 <br/>
                 <br/>
             </div>
