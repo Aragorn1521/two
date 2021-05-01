@@ -33,8 +33,23 @@ Class User {
         }
     
         public static function auth($userId) {
-            session_start();
+            
             $_SESSION['user'] = $userId;
+            
+        }
+        
+        public static function chekLogged(){
+            if(isset($_SESSION['user'])){
+                return $_SESSION['user'];
+            }
+            header("Location: /user/login");
+        }
+        public static function isGuest() 
+                {
+            if(isset($_SESSION['user'])){
+                return false;
+            }
+            return true;
             
         }
 
