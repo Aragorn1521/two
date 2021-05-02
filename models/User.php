@@ -16,6 +16,21 @@ Class User {
         
     }
     
+    public static function edit($id,$name,$password) {
+      
+        $db = Db::getConnection();
+        
+        $sql = "UPDATE user SET name = :name, password = :password WHERE id = :id";
+       
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':password', $password, PDO::PARAM_STR);
+        
+        return $result->execute();
+        
+    }
+    
     public static function chekUserData($email,$password){
         $db = Db::getConnection();
         $sql = 'SELECT * FROM user WHERE email = :email AND password = :password';
@@ -91,4 +106,19 @@ Class User {
         
     
     }
+    
+     public static function getUserById($id)
+        {
+         $db = Db::getConnection();
+         $sql = 'SELECT * FROM user WHERE id = :id';
+         
+         $result = $db->prepare($sql);
+         $result->bindParam('id',$id,PDO::PARAM_INT);
+         
+         $result->setFetchMode(PDO::PARAM_INT);
+         $result->execute();
+         return $result->fetch();
+                 
+            
+        }
 }

@@ -5,6 +5,7 @@
         <div class="row">
 
             <h1>Кабинет пользователя</h1>
+            <h3>Привет,<?php echo $user['name'];?>!</h3>
             
            
             <ul>
