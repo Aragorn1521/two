@@ -2,6 +2,7 @@
 
 return [
     'product/([0-9]+)'=>'product/view/$1',
+    'privet'=>'privet/index',
     
     'catalog'=>'catalog/index',
     
@@ -22,6 +23,11 @@ return [
     
     'cabinet/edit'=>'cabinet/edit',
     'cabinet'=>'cabinet/index',
+    
+    'admin/product/create' => 'adminProduct/create',
+    'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
+    'admin/product' => 'adminProduct/index',
+    'admin'=>'admin/index',
     
     
     ''=>'site/index',

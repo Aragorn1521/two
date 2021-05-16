@@ -65,14 +65,19 @@
                                             (<span id="cart-count"><?php echo Cart::countItems();?></span>)
                                         </a>
                                     </li>
-                                         
+                                    
+                                    
                                     <?php if(User::isGuest()):?>
                                         <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
                                         <li><a href="/user/register/"><i class="fa fa-lock"></i> Регистрация</a></li>
-                                    <?php else:?>    
+                                    <?php else:?> 
+                                        <?php if(AdminBase::checkAdmin()):?>
+                                        <li><a href="/admin/"><i class="fa fa-user"></i> Admin</a></li> 
+                                    <?php endif;?>
                                         <li><a href="/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>                                    
                                         <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>                                        
                                    <?php endif;?>
+                                        
                                 </ul>
                             </div>
                         </div>

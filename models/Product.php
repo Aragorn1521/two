@@ -90,6 +90,48 @@ return $products;
              
         
     }
+      public static function getRecommendedProducts()
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Получение и возврат результатов
+        $result = $db->query('SELECT * FROM product '
+                . 'WHERE is_recommended = "0"');
+        $productsList = $result->fetchAll();
+        return $productsList;
+    }
+    
+    public static function getProductList()
+    {
+        $db = Db::getConnection();
+        $result = $db->query('SELECT * FROM product ORDER BY id ASC');
+        $productList = $result->fetchAll();
+        return $productList;
+    }
+    
+    public static function deleteProductById($id){
+        $db = Db::getConnection();
+        
+        $result = $db->prepare('DELETE FROM product WHERE id = :id');
+        $result->bindParam(':id', $id,PDO::PARAM_INT);
+        return $result->execute();
+        
+    }
+    public static function createProduct($options)
+    {
+        $db = Db::getConnection();
+        $sql = 'INSERT INTO product '
+                . '(name,code,price,category_id,brand,availability,'
+                . 'description,is_new,is_recommended,status)'
+                . ' VALUES (:name,:code,:price,:category_id,:brand,:availability,'
+                . ':description,:is_new,:is_recommended,:status)';
+        $result = $db->prepare($sql);
+        if($result->execute()){
+            return $db->lastInsertId();
+        }
+        return 0;
+    }
 
 }
 
