@@ -4,25 +4,19 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Z:/home/two/www/views/admin/index.php</file>
-            <file>file:/Z:/home/two/www/controllers/UserController.php</file>
-            <file>file:/Z:/home/two/www/models/Order.php</file>
-            <file>file:/Z:/home/two/www/views/site/index.php</file>
+            <file>file:/Z:/home/two/www/views/admin_product/update.php</file>
             <file>file:/Z:/home/two/www/controllers/CartController.php</file>
-            <file>file:/Z:/home/two/www/models/Category.php</file>
             <file>file:/Z:/home/two/www/controllers/CabinetController.php</file>
             <file>file:/Z:/home/two/www/controllers/PrivetController.php</file>
-            <file>file:/Z:/home/two/www/controllers/SiteController.php</file>
             <file>file:/Z:/home/two/www/controllers/AdminProductController.php</file>
             <file>file:/Z:/home/two/www/models/Cart.php</file>
             <file>file:/Z:/home/two/www/views/cabinet/index.php</file>
             <file>file:/Z:/home/two/www/controllers/NewsController.php</file>
             <file>file:/Z:/home/two/www/controllers/ProductController.php</file>
-            <file>file:/Z:/home/two/www/views/cart/checkout.php</file>
             <file>file:/Z:/home/two/www/controllers/AdminController.php</file>
             <file>file:/Z:/home/two/www/views/admin_product/create.php</file>
             <file>file:/Z:/home/two/www/index.php</file>
             <file>file:/Z:/home/two/www/components/Router.php</file>
-            <file>file:/Z:/home/two/www/views/layouts/footer.php</file>
             <file>file:/Z:/home/two/www/models/Product.php</file>
             <file>file:/Z:/home/two/www/config/routes.php</file>
             <file>file:/Z:/home/two/www/components/AdminBase.php</file>

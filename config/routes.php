@@ -24,6 +24,8 @@ return [
     'cabinet/edit'=>'cabinet/edit',
     'cabinet'=>'cabinet/index',
     
+    
+    'admin/product/update' => 'adminProduct/update',
     'admin/product/create' => 'adminProduct/create',
     'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
     'admin/product' => 'adminProduct/index',
