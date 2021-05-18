@@ -20,6 +20,30 @@ Class Category
         $categoryList = $result->fetchAll();
         return $categoryList;
     }
+       public static function getStatusText($status)
+    {
+        switch ($status) {
+            case '1':
+                return 'Отображается';
+                break;
+            case '0':
+                return 'Скрыта';
+                break;
+        }
+    }
+     public static function createCategory($name,$sortOrder,$status)
+    {
+        $db = Db::getConnection();
+        $sql = 'INSERT INTO category '
+                . '(name,sort_order,status)'
+                . ' VALUES (:name,:sort_order,:status)';
+        $result = $db->prepare($sql);
+         $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':sort_order', $sortOrder, PDO::PARAM_INT);
+        $result->bindParam(':status', $status, PDO::PARAM_INT);
+        
+        return $result->execute();
+    }
     
      
 }

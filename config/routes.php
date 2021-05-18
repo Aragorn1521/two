@@ -25,10 +25,12 @@ return [
     'cabinet'=>'cabinet/index',
     
     
-    'admin/product/update' => 'adminProduct/update',
-    'admin/product/create' => 'adminProduct/create',
+    'admin/product/update/([0-9]+)' => 'adminProduct/update/$1',
     'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
+    'admin/product/create' => 'adminProduct/create',
     'admin/product' => 'adminProduct/index',
+    'admin/category/create' => 'adminCategory/create',
+    'admin/category' => 'adminCategory/index',
     'admin'=>'admin/index',
     
     

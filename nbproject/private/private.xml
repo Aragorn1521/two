@@ -8,6 +8,7 @@
             <file>file:/Z:/home/two/www/controllers/CartController.php</file>
             <file>file:/Z:/home/two/www/controllers/CabinetController.php</file>
             <file>file:/Z:/home/two/www/controllers/PrivetController.php</file>
+            <file>file:/Z:/home/two/www/models/Category.php</file>
             <file>file:/Z:/home/two/www/controllers/AdminProductController.php</file>
             <file>file:/Z:/home/two/www/models/Cart.php</file>
             <file>file:/Z:/home/two/www/views/cabinet/index.php</file>
@@ -16,6 +17,8 @@
             <file>file:/Z:/home/two/www/controllers/AdminController.php</file>
             <file>file:/Z:/home/two/www/views/admin_product/create.php</file>
             <file>file:/Z:/home/two/www/index.php</file>
+            <file>file:/Z:/home/two/www/views/admin_category/index.php</file>
+            <file>file:/Z:/home/two/www/controllers/AdminCategoryController.php</file>
             <file>file:/Z:/home/two/www/components/Router.php</file>
             <file>file:/Z:/home/two/www/models/Product.php</file>
             <file>file:/Z:/home/two/www/config/routes.php</file>
