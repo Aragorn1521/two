@@ -81,7 +81,7 @@
                                             <img src="/template/images/home/recommend1.jpg" alt="" />
                                             <h2>$<?php echo $sliderItem['price']; ?></h2>
                                             <a href="/product/<?php echo $sliderItem['id']; ?>">
-                                                <?php echo $product['name']; ?>
+                                                <?php echo $sliderItem['name']; ?>
                                             </a>
                                             <br/><br/>
                                             <a href="#" class="btn btn-default add-to-cart" data-id="<?php echo $sliderItem['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>

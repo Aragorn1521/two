@@ -28,31 +28,25 @@ Class AdminCategoryController extends AdminBase
            
            $categoryList = Category::getCategoriesListAdmin();
            
-           $product = Product::getProductById($id);
+           $category = Category::getCategoryById($id);
            
            if(isset($_POST['submit'])){
                
-               $options['name'] = $_POST['name'];
-               $options['code'] = $_POST['code'];
-               $options['price'] = $_POST['price'];
-               $options['category_id'] = $_POST['category_id'];
-               $options['brand'] = $_POST['brand'];
-               $options['availability'] = $_POST['availability'];
-               $options['description'] = $_POST['description'];
-               $options['is_new'] = $_POST['is_new'];
-               $options['is_recommended'] = $_POST['is_recommended'];
-               $options['status'] = $_POST['status'];
-               
-             if (Product::updateProduct($id, $options)) {
-                 
-                 
-             }
+               $name = $_POST['name'];
+               $sortOrder = $_POST['sort_order'];
+               $status = $_POST['status'];
               
                
-                    header("Location: /admin/product");
+             Category::updateCategory($id,$name,$sortOrder,$status); 
+                 
+                 
+             
+              
+               
+                    header("Location: /admin/category");
                }
                
-                require_once (ROOT.'/views/admin_product/update.php');
+                require_once (ROOT.'/views/admin_category/update.php');
            return true;
            }
            else return false;
@@ -116,10 +110,10 @@ Class AdminCategoryController extends AdminBase
            
            if(isset($_POST['submit'])){
           
-               Product::deleteProductById($id);
-               header("Location: /admin/product");
+               Category::deleteCategoryById($id);
+               header("Location: /admin/category");
        }
-       require_once (ROOT.'/views/admin_product/delete.php');
+       require_once (ROOT.'/views/admin_category/delete.php');
        return true;
        }
        else return false;

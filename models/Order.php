@@ -36,4 +36,33 @@ class Order
         return $result->execute();
     }
 
+    public static function getOrdersList()
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Получение и возврат результатов
+        $result = $db->query('SELECT * FROM product_order ORDER BY id DESC');
+        $ordersList = $result->fetchAll();
+        
+        return $ordersList;
+    }
+     public static function getStatusText($status)
+    {
+        switch ($status) {
+            case '1':
+                return 'Новый заказ';
+                break;
+            case '2':
+                return 'В обработке';
+                break;
+            case '3':
+                return 'Доставляется';
+                break;
+            case '4':
+                return 'Закрыт';
+                break;
+        }
+    }
+
 }

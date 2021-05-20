@@ -29,8 +29,12 @@ return [
     'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
     'admin/product/create' => 'adminProduct/create',
     'admin/product' => 'adminProduct/index',
+    'admin/category/delete/([0-9]+)' => 'adminCategory/delete/$1',
+    'admin/category/update/([0-9]+)' => 'adminCategory/update/$1',
     'admin/category/create' => 'adminCategory/create',
     'admin/category' => 'adminCategory/index',
+    
+    'admin/order' => 'adminOrder/index',
     'admin'=>'admin/index',
     
     
