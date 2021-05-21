@@ -64,5 +64,25 @@ class Order
                 break;
         }
     }
+    public static function getOrderById($id)
+    {
+        $db = Db::getConnection();
+        $sql = 'SELECT * FROM product_order WHERE id = :id';
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id,PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        return $result->fetch();
+    }
+    
+    public static function DeleteOrerById($id)
+    {
+        $db = Db::getConnection();
+        $sql = 'DELETE FROM product_order WHERE id = :id';
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id,PDO::PARAM_INT);
+        $result->execute();
+        return $result;
+    }
 
 }

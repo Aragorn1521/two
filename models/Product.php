@@ -97,7 +97,7 @@ return $products;
 
         // Получение и возврат результатов
         $result = $db->query('SELECT * FROM product '
-                . 'WHERE is_recommended = "0"');
+                . 'WHERE is_recommended = "1"');
         $productsList = $result->fetchAll();
         return $productsList;
     }

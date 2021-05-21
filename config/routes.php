@@ -34,6 +34,8 @@ return [
     'admin/category/create' => 'adminCategory/create',
     'admin/category' => 'adminCategory/index',
     
+    'admin/order/view/([0-9]+)' => 'adminOrder/view/$1',
+    'admin/order/delete/([0-9]+)' => 'adminOrder/delete/$1',
     'admin/order' => 'adminOrder/index',
     'admin'=>'admin/index',
     
