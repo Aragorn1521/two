@@ -43,9 +43,9 @@
                                                 В корзину
                                             </button>
                                         </span>
-                                        <p><b>Наличие:</b> На складе</p>
-                                        <p><b>Состояние:</b> Новое</p>
-                                        <p><b>Производитель:</b> D&amp;G</p>
+                                        <p><b>Наличие:</b><?php echo Product::getStatusSost($product['status']) ?></p>
+                                        <p><b>Состояние:</b> <?php echo Product::getStatusNew($product['is_new'])?></p>
+                                        <p><b>Производитель:</b> <?php echo $product['brand']?></p>
                                     </div><!--/product-information-->
                                 </div>
                             </div>

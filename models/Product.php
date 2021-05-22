@@ -172,7 +172,33 @@ return $products;
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         
             return $result->execute();
+            
+            
         
+    }
+    
+    public static function getStatusNew ($status)
+    {
+        switch ($status) {
+            case '1':
+                return 'Новинка';
+                break;
+            case '0':
+                return 'Не новинка';
+                break;
+        }
+    }
+    
+     public static function getStatusSost ($status)
+    {
+        switch ($status) {
+            case '1':
+                return 'Есть на складе';
+                break;
+            case '0':
+                return 'Нет на складе';
+                break;
+        }
     }
 
 }

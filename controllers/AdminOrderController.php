@@ -60,11 +60,34 @@ class AdminOrderController extends AdminBase
  else {
        return false;    
        }
-       
-       
-       
-       
-    
-    
+     
+}
+
+public function actionUpdate($id){
+        
+       $admin = self::checkAdmin();
+      
+       if($admin == true){
+           $order = Order::getOrderById($id);
+           
+            if(isset($_POST['submit'])){
+                $userName = $_POST['userName'];
+                $userPhone = $_POST['userPhone'];
+                $userComment = $_POST['userComment'];
+                $date = $_POST['date'];
+                $status = $_POST['status'];
+              
+                
+                Order::UpdateOrderById($id, $userName,$userPhone,$userComment,$date,$status);
+                 header("Location: /admin/order/view/$id");
+                
+            }
+           require_once (ROOT.'/views/admin_order/update.php');
+           
+           return true;
+       }
+ else {
+       return false;    
+       }
 }
 }
