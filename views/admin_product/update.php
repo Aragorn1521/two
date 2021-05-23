@@ -48,6 +48,10 @@
 
                         <p>Производитель</p>
                         <input type="text" name="brand" placeholder="" value="<?php echo $product['brand']; ?>">
+                        
+                         <p>Изображение товара</p>
+                        <img src="<?php echo Product::getImage($product['id']); ?>" width="200" alt="" />
+                        <input type="file" name="image" placeholder="" value="<?php echo $product['image']; ?>">
 
                         
 

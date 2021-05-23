@@ -40,7 +40,8 @@ return [
     'admin/order' => 'adminOrder/index',
     'admin'=>'admin/index',
     
-    
+    'contacts' => 'site/contact',
+    'about' => 'site/about',
     ''=>'site/index',
     
     

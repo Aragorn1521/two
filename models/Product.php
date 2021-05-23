@@ -3,7 +3,7 @@
 class Product
 {
 
-    const SHOW_BY_DEFAULT = 2;
+    const SHOW_BY_DEFAULT = 6;
     
     public static function getLatestProducts($count = self::SHOW_BY_DEFAULT)
     {
@@ -199,6 +199,15 @@ return $products;
                 return 'Нет на складе';
                 break;
         }
+    }
+    public static function getImage($id) {
+        $noImage = 'no-image.jpg';
+        $path = '/upload/images/products/';
+        $pathToProductImage = $path .$id.'.jpg';
+        if(file_exists($_SERVER['DOCUMENT_ROOT'].$pathToProductImage)){
+            return $pathToProductImage;
+        }
+        return $path . $noImage;
     }
 
 }
